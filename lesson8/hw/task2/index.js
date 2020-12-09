@@ -13,8 +13,8 @@ user['favorite music'] = 'rock';
 /* присвойте объекту свойство 'address', которое будет пустым объкетом */
 user.address = {};
 /* присвойте объекту в 'address' свойство 'country', со значением 'Ukraine' */
-user.address = { country: 'Ukraine' };
+user.address['country'] = 'Ukraine';
 /* присвойте объекту в 'address' свойство 'building', со значением 17 */
-user.address = { building: 17 };
+user.address['building'] = 17;
 /* выведите в консоль объект user */
 console.log(user);
