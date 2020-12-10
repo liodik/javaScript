@@ -1,5 +1,4 @@
-function filterNames(arr, text) {
-  const longerFive = arr.filter(el => el.length > 5);
-  return longerFive.filter(el => el.indexOf(text) !== -1);
+function getAdults(obj) {
+  for (const key in obj) {
+console.log(`{$(key): ${obj[key]}`);
 }
-// console.log(filterNames(['John', 'Olivya', 'Oleksandr', 'Emanuel', 'Vanya', 'Nastya'], 'ya'));
