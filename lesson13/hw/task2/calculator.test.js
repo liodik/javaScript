@@ -24,7 +24,7 @@ it('should return division of numbers', () => {
   expect(result).toEqual('6 / 2 = 3');
 });
 
-it('should return division of numbers', () => {
+it('should return null', () => {
   const result = calc(10);
 
   expect(result).toEqual(null);
