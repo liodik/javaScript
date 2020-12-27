@@ -1,14 +1,7 @@
-export const getItemsList = () => {
-  const elementList = document.querySelectorAll('.technology');
-  console.dir(elementList);
-  return elementList;
+const inputElem = document.querySelector('.text-input');
+
+const inputFunc = () => {
+  console.log(inputElem.value);
 };
 
-// console.log(getItemsList());
-
-export const getItemsArray = () => {
-  const elementsArray = Array.from(document.querySelectorAll('.tool'));
-  console.dir(elementsArray);
-  return elementsArray;
-};
-// console.log(getItemsArray());
+inputElem.addEventListener('change', inputFunc);
