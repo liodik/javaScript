@@ -1,11 +1,8 @@
-export const setButton = buttonText => {
-  document.querySelector('body').innerHTML = `<button>${buttonText}</button>`;
+const singleUseButton = document.querySelector('.single-use-btn');
+
+const clicFunc = () => {
+  console.log('clicked');
+  singleUseButton.removeEventListener('click', clicFunc);
 };
 
-// setButton('javascript');
-
-// const setButton2 = buttonText => {
-//   document.querySelector('body').textContent = `<button>${buttonText}</button>`;
-// };
-
-// setButton2('javascript');
+singleUseButton.addEventListener('click', clicFunc);
