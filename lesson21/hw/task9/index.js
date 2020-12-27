@@ -1,7 +1,8 @@
-export const finishList = () => {
+export const finishForm = () => {
   const loginInput = document.createElement('input');
   loginInput.setAttribute('name', 'login');
-  document.querySelector('.login-form').append(loginInput);
+  loginInput.setAttribute('type', 'text');
+  document.querySelector('.login-form').prepend(loginInput);
 
   document.querySelector('[name="password"]').setAttribute('type', 'password');
 };
