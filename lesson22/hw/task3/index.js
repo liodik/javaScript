@@ -1,23 +1,6 @@
-export const getTitle = () => {
-  return document.querySelector('.title').textContent;
+const checkboxElem = document.querySelector('.task-status');
+// console.log(checkboxElem.checked);
+const checkFunc = () => {
+  checkboxElem.checked ? console.log(true) : console.log(false);
 };
-
-// console.log(getTitle());
-
-export const getDescription = () => {
-  return document.querySelector('.about').innerText;
-};
-
-// console.log(getDescription());
-
-export const getPlans = () => {
-  return document.querySelector('.plans').innerHTML;
-};
-
-// console.log(getPlans());
-
-export const getGoal = () => {
-  return document.querySelector('.goal').outerHTML;
-};
-
-// console.log(getGoal());
+checkboxElem.addEventListener('change', checkFunc);
