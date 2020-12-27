@@ -1,4 +1,4 @@
-export const finishlist = () => {
+export const finishList = () => {
   const listItem1 = document.createElement('li');
   listItem1.textContent = '1';
   document.querySelector('ul').prepend(listItem1);
@@ -14,4 +14,4 @@ export const finishlist = () => {
   listItem8.textContent = '8';
   document.querySelector('ul').append(listItem8);
 };
-// finishlist();
+// finishList();
