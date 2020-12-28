@@ -7,6 +7,9 @@ const tasks = [
   { text: 'Visit doctor', done: true },
   { text: 'Buy meat', done: true },
 ];
+tasks.forEach((item, i) => {
+  item.id = i + 1;
+});
 
 const renderTasks = tasksList => {
   listElem.innerHTML = '';
@@ -41,11 +44,12 @@ const addTask = () => {
     return;
   }
   tasks.push(task);
+  tasks.forEach((item, i) => {
+    item.id = i + 1;
+  });
   renderTasks(tasks);
   inputElem.value = '';
 };
-
-renderTasks(tasks);
 
 const createBtn = document.querySelector('.create-task-btn');
 createBtn.addEventListener('click', addTask);
@@ -57,10 +61,9 @@ const handleClick = event => {
       return el.done === false ? (el.done = true) : (el.done = false);
     }
   });
-  tasks.forEach((item, i) => {
-    item.id = i + 1;
-  });
+
   return renderTasks(tasks);
 };
 
 listElem.addEventListener('click', handleClick);
+renderTasks(tasks);
