@@ -6,7 +6,7 @@ export const handleClick = e => {
   if (!isCheckbox) {
     return;
   }
-  const taskList = getItem('taskList');
+  const taskList = getItem('tasksList');
   const newTaskList = taskList.map(task => {
     if (task.id === e.target.dataset.id) {
       const done = e.target.checked;
@@ -17,7 +17,7 @@ export const handleClick = e => {
     }
     return task;
   });
-  setItem('taskList', newTaskList);
+  setItem('tasksList', newTaskList);
 
   renderTasks();
 };

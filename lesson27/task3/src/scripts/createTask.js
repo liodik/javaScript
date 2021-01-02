@@ -9,14 +9,14 @@ export const addTask = () => {
     return;
   }
   inputElem.value = '';
-  const tasksList = getItem('taskList') || [];
+  const tasksList = getItem('tasksList') || [];
 
   const newTaskList = tasksList.concat({
     text,
     done: false,
     id: (Math.random() * 1000).toFixed(),
   });
-  setItem('taskList', newTaskList);
+  setItem('tasksList', newTaskList);
 
   renderTasks();
 };

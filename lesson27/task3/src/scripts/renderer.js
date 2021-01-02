@@ -1,7 +1,7 @@
 import { listElem, getItem } from './storage.js';
 
 export const renderTasks = () => {
-  const tasksList = getItem('taskList') || [];
+  const tasksList = getItem('tasksList') || [];
 
   listElem.innerHTML = '';
   const tasksElems = tasksList
