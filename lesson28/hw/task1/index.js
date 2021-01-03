@@ -8,6 +8,7 @@ export const shmoment = date => {
         seconds: value => newDate.setSeconds(newDate.getSeconds() + value),
         minutes: value => newDate.setMinutes(newDate.getMinutes() + value),
         hours: value => newDate.setHours(newDate.getHours() + value),
+        days: value => newDate.setDate(newDate.getDate() + value),
         months: value => newDate.setMonth(newDate.getMonth() + value),
         years: value => newDate.setFullYear(newDate.getFullYear() + value),
       };
@@ -21,6 +22,7 @@ export const shmoment = date => {
         seconds: value => newDate.setSeconds(newDate.getSeconds() - value),
         minutes: value => newDate.setMinutes(newDate.getMinutes() - value),
         hours: value => newDate.setHours(newDate.getHours() - value),
+        days: value => newDate.setDate(newDate.getDate() - value),
         months: value => newDate.setMonth(newDate.getMonth() - value),
         years: value => newDate.setFullYear(newDate.getFullYear() - value),
       };
