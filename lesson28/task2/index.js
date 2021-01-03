@@ -17,14 +17,14 @@
 //   ],
 // };
 
-export const markFavorite = (tree, favorites) => {
+export const markFavorites = (tree, favorites) => {
   const isFavorite = favorites.includes(tree.id);
   return {
     ...tree,
     isFavorite,
-    nodes: tree.nodes.map(childNode => markFavorite(childNode, favorites)),
+    nodes: tree.nodes.map(childNode => markFavorites(childNode, favorites)),
   };
 };
 
-// const result = markFavorite(tree, favorites);
+// const result = markFavorites(tree, favorites);
 // console.log(result);
