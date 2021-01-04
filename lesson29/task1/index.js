@@ -1,4 +1,4 @@
-export const addImage = (imgSrc, callback) => {
+const addImage = (imgSrc, callback) => {
   const imgElem = document.createElement('img');
   imgElem.setAttribute('alt', 'my photo');
   imgElem.src = imgSrc;
@@ -7,11 +7,10 @@ export const addImage = (imgSrc, callback) => {
   containerElem.append(imgElem);
 
   const onImageLoaded = () => {
-    const { width, height } = imgElem;
-    callback(null, { width, height });
+    callback(null, imgElem);
   };
   imgElem.addEventListener('load', onImageLoaded);
-  imgElem.addEventListener('error', () => callback('Image load failed'));
+  imgElem.addEventListener('error', () => callback('Image load failed...'));
 };
 
 //callack example
@@ -25,7 +24,9 @@ const onImageLoaded = (error, imgElem) => {
   sizeElem.textContent = `${width} x ${height}`;
 };
 
-//test call
+export { addImage };
+
+// //test call
 // addImage(
 //   'https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg',
 //   onImageLoaded
