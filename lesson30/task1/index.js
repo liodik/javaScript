@@ -1,4 +1,4 @@
-const addImage = imgSrc => {
+export const addImage = imgSrc => {
   const p = new Promise((resolve, regect) => {
     const imgElem = document.createElement('img');
     imgElem.setAttribute('alt', 'my photo');
@@ -15,4 +15,3 @@ const addImage = imgSrc => {
   });
   return p;
 };
-addImage();
