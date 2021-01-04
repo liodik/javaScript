@@ -10,7 +10,7 @@ const addImage = (imgSrc, callback) => {
     callback(null, imgElem);
   };
   imgElem.addEventListener('load', onImageLoaded);
-  imgElem.addEventListener('error', () => callback('Image load failed...'));
+  imgElem.addEventListener('error', () => callback('Image load is failed...'));
 };
 
 //callack example
