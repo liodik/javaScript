@@ -9,8 +9,8 @@ export const requestUserData = userId => {
         resolve({
           name: 'John',
           age: 17,
-          emil: `${userId}@example.com`,
           userId,
+          emil: `${userId}@example.com`,
         });
       }, 1000);
     }
