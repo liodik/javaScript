@@ -1,4 +1,4 @@
-function delay(interval) {
+export function delay(interval) {
   return new Promise((resolve, reject) => {
     setTimeout(resolve, interval);
   });
