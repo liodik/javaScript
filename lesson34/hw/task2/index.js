@@ -32,7 +32,6 @@ const onFormSubmit = e => {
     })
     .catch(() => {
       errorTextElem.textContent = 'Failed to create user';
-
       submitBtnElem.disabled = true;
     });
 };
