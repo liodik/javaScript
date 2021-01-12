@@ -23,4 +23,4 @@ export const getUserASAP = userId => {
   return Promise.race(requests);
 };
 
-// getUserASAP('userId').then(res => console.log(res));
+getUserASAP('userId').then(res => console.log(res));
