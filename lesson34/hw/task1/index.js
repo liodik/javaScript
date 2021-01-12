@@ -1,4 +1,4 @@
-// const baseUrl = 'https://5e5cf5eb97d2ea0014796f01.mockapi.io/api/v1/users';
+const baseUrl = 'https://5ffd9eb5d9ddad0017f6842a.mockapi.io/api/v1/users';
 
 export function getUsersList() {
   return fetch(baseUrl).then(response => response.json());
