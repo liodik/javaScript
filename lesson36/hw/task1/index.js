@@ -15,4 +15,4 @@ export const getUsersBlogs = async (...users) => {
   }
 };
 
-// getUsersBlogs('facebook', 'github', 'google').then(linkList => console.log(linkList));
+getUsersBlogs('facebook', 'github', 'google').then(linkList => console.log(linkList));
