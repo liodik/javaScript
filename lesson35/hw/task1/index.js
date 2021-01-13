@@ -1,6 +1,6 @@
 const user = '{"name":"John"}';
 
-export const parserUser = stringJson => {
+export const parseUser = stringJson => {
   try {
     return JSON.parse(stringJson);
   } catch (err) {
