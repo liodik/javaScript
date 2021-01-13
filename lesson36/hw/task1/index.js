@@ -8,11 +8,11 @@ const func = userId => {
 
 // const res = func('facebook');
 // console.log(res);
-export const getUsersBlogs = async (...users) => {
+export const getUsersBlogs = async users => {
   const arrOfPromise = users.map(user => func(user));
   const res = await Promise.all(arrOfPromise);
-  const blogList = res.map(el => el.blog);
-  return blogList;
+  const linkList = res.map(el => el.blog);
+  return linkList;
 };
 
-// getUsersBlogs('facebook', 'github', 'google').then(linkList => console.log(linkList));
+// getUsersBlogs(['facebook', 'github', 'google']).then(linkList => console.log(linkList));
