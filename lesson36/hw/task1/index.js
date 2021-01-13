@@ -4,7 +4,7 @@ const func = userId => {
 
 // const res = func('facebook');
 // console.log(res);
-export const getUserBlogs = async (...users) => {
+export const getUsersBlogs = async (...users) => {
   try {
     const arrOfPromise = users.map(user => func(user));
     const res = await Promise.all(arrOfPromise);
@@ -15,4 +15,4 @@ export const getUserBlogs = async (...users) => {
   }
 };
 
-// getUserBlogs('facebook', 'github', 'google').then(linkList => console.log(linkList));
+// getUsersBlogs('facebook', 'github', 'google').then(linkList => console.log(linkList));
